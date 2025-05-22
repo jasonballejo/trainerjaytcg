@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+// ANALYTICS
+import GA4 from "@/components/Analytics/GA4";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,6 +32,7 @@ export default function RootLayout({
       >
         {children}
       </body>
+      <GA4 GA4_ID={process.env.NEXT_PUBLIC_GA4_ID} />
     </html>
   );
 }
