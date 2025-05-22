@@ -8,15 +8,15 @@ import page from "@/app/japanese/page";
 export default function Topbar() {
   return (
     <div>
-      <div className="flex justify-between p-2 bg-blue-500">
+      <div className="flex justify-between w-screen px-10">
         {/* LEFT */}
         <div className="flex justify-start">
           <Image src={logo} width={75} height={75} alt="logo" />
         </div>
         {/* CENTER */}
-        <div className="flex justify-center items-center w-full gap-8 bg-red-500">
+        <div className="flex justify-center items-center w-full gap-8">
           <Popover>
-            <PopoverButton className="block text-sm/6 font-semibold text-white/50 focus:outline-none data-active:text-white data-focus:outline data-focus:outline-white data-hover:text-white">
+            <PopoverButton className="block text-sm/6 font-semibold text-white/50 focus:outline-none data-active:text-white data-focus:outline data-focus:outline-white data-hover:text-white uppercase">
               Shop
             </PopoverButton>
             <PopoverPanel
@@ -29,7 +29,7 @@ export default function Topbar() {
                   className="block rounded-lg px-3 py-2 transition hover:bg-white/5"
                   href="#"
                 >
-                  <p className="font-semibold text-white">
+                  <p className="font-semibold text-white uppercase">
                     <Link href="/japanese">Japanese</Link>
                   </p>
                   {/* <p className="text-white/50">Measure actions your users take</p> */}
@@ -38,7 +38,7 @@ export default function Topbar() {
                   className="block rounded-lg px-3 py-2 transition hover:bg-white/5"
                   href="#"
                 >
-                  <p className="font-semibold text-white">
+                  <p className="font-semibold text-white uppercase">
                     <Link href="/singles">Singles</Link>
                   </p>
                   {/* <p className="text-white/50">Create your own targeted content</p> */}
@@ -47,7 +47,7 @@ export default function Topbar() {
                   className="block rounded-lg px-3 py-2 transition hover:bg-white/5"
                   href="#"
                 >
-                  <p className="font-semibold text-white">
+                  <p className="font-semibold text-white uppercase">
                     <Link href="/graded">Graded Slabs</Link>
                   </p>
                   {/* <p className="text-white/50">Keep track of your growth</p> */}
@@ -61,10 +61,14 @@ export default function Topbar() {
               </div> */}
             </PopoverPanel>
           </Popover>
-          <div className="text-sm/6 font-semibold text-white/50">Contact</div>
+          <div className="text-sm/6 font-semibold text-white/50 uppercase">
+            <p className="block text-sm/6 font-semibold text-white/50 focus:outline-none active:text-white data-focus:outline focus:outline-white hover:text-white uppercase">
+              <Link href="/contact">Contact</Link>
+            </p>
+          </div>
         </div>
         {/* RIGHT */}
-        <div className="flex justify-center items-center bg-amber-500">
+        <div className="flex justify-center items-center">
           <h1>RIGHT</h1>
         </div>
         {/* <div className="text-sm/6 font-semibold text-white/50">Shop</div> */}
