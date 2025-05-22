@@ -1,7 +1,9 @@
-import Image from "next/image";
+import Topbar from "@/components/Navbar/Topbar"
 
 export default function Home() {
   return (
-  <h1>Hello World!</h1>
+    <div className="max-w-full flex flex- justify-center">
+      <Topbar />
+  </div>
   )
 }
