@@ -2,6 +2,8 @@ import React from "react";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import Image from "next/image";
 import logo from "@/images/logo/logo.png";
+import Link from "next/link";
+import page from "@/app/japanese/page";
 
 export default function Topbar() {
   return (
@@ -27,21 +29,27 @@ export default function Topbar() {
                   className="block rounded-lg px-3 py-2 transition hover:bg-white/5"
                   href="#"
                 >
-                  <p className="font-semibold text-white">Japanese</p>
+                  <p className="font-semibold text-white">
+                    <Link href="/japanese">Japanese</Link>
+                  </p>
                   {/* <p className="text-white/50">Measure actions your users take</p> */}
                 </a>
                 <a
                   className="block rounded-lg px-3 py-2 transition hover:bg-white/5"
                   href="#"
                 >
-                  <p className="font-semibold text-white">Singles</p>
+                  <p className="font-semibold text-white">
+                    <Link href="/singles">Singles</Link>
+                  </p>
                   {/* <p className="text-white/50">Create your own targeted content</p> */}
                 </a>
                 <a
                   className="block rounded-lg px-3 py-2 transition hover:bg-white/5"
                   href="#"
                 >
-                  <p className="font-semibold text-white">Graded Slabs</p>
+                  <p className="font-semibold text-white">
+                    <Link href="/graded">Graded Slabs</Link>
+                  </p>
                   {/* <p className="text-white/50">Keep track of your growth</p> */}
                 </a>
               </div>
